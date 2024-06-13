@@ -1,7 +1,7 @@
 # Database System
 **2022-2023**
 
-Bài tập lớn môn Hệ Cơ Sở Dữ Liệu
+Bài tập lớn môn Hệ Cơ Sở Dữ Liệu.
 
 - Viết đặc tả cho một nghiệp vụ bất kì. Đặc tả có đủ mối quan hệ 1-n, quan hệ n-n,
 quan hệ cha – con, quan hệ 1-1, quan hệ giữa thực thể mạnh và thực thể yếu.
