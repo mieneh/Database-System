@@ -1,0 +1,24 @@
+"Table:"
+    "KhachHang": [PK_MaKH, HoTenKH, CMND, QuocTich, SoLanDatPhong]
+    "Nomal": [PK_MaKH]
+    "Vip": [PK_MaKH, NgayHetHan]
+    "DaTri_KhachHang_SDT": [PK_SDT, PK_MaKH]
+    "DongKhach": [PK_SDT_DK, HoTenDK, CMND]
+    "KhachHang_Co_DongKhach": [PK_SDT_DK, PK_MaKH]
+    "LoaiPhong": [PK_MaLP, TenLP, DonGia]
+    "Phong": [PK_MaPhong, SucChua, SoGiong, ViTri, TinhTrang, PK_MaLP]
+    "DichVu": [PK_MaDV, TenDV, DonGia]
+    "PhieuPhong": [PK_MaPP, NgayGioNhan, NgayGioTra, TinhTrang]
+    "SuDungDichVu": [NgayGioDat, SoLuong, PK_MaDV, PK_MaPP]
+    "HoaDon": [PK_MaHD, TienPhong, TienDichVu, TongTien, PK_MaPP]
+
+"Dependencies:"
+    {(PK_MaKH) => [HoTenKH, CMND, QuocTich, SoLanDatPhong, PK_SDT]}
+    {(PK_MaKH) => [NgayHetHan]}
+    {(PK_SDT_DK) => [HoTenDK, CMND]}
+    {(PK_MaLP) => [TenLP, DonGia]}
+    {(PK_MaPhong) => [SucChua, SoGiong, ViTri, TinhTrang, PK_MaLP]}
+    {(PK_MaDV) => [TenDV, DonGia]}
+    {(PK_MaPP) => [NgayGioNhan, NgayGioTra, TinhTrang]}
+    {(PK_MaDV, PK_MaPP) => [NgayGioDat, SoLuong]}    
+    {(PK_MaHD) => [TienPhong, TienDichVu, TongTien, PK_MaPP]}

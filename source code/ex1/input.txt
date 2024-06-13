@@ -1,0 +1,49 @@
+"Entity": [
+    {
+        "KhachHang": [PK_MaKH, HoTenKH, CMND, QuocTich, SoLanDatPhong]
+    },{
+        "Nomal": []
+    },{
+        "Vip": [NgayHetHan]
+    },{
+        "DaTri_KhachHang_SDT": [PK_SDT]
+    },{
+        "DongKhach": [PK_SDT, HoTenDK, CMND]
+    },{
+        "KhachHang_Co_DongKhach": []
+    },{
+        "LoaiPhong": [PK_MaLP, TenLP, DonGia]
+    },{
+        "Phong": [PK_MaPhong, SucChua, SoGiong, ViTri, TinhTrang]
+    },{
+        "DichVu": [PK_MaDV, TenDV, DonGia]
+    },{
+        "PhieuPhong": [PK_MaPP, NgayGioNhan, NgayGioTra, TinhTrang]
+    },{
+        "SuDungDichVu": [NgayGioDat, SoLuong]
+    },{
+        "HoaDon": [PK_MaHD, TienPhong, TienDichVu, TongTien]
+    }
+],
+
+"Relationship": [
+    {
+        "LoaiPhong" (1,1) ---- <Thuoc> ---- (1,n) 'Phong'
+    },{
+        "PhieuPhong" (1,n) ---- <Co> ---- (1,1) 'Phong'
+    },{
+        "PhieuPhong" (1,n) ---- <DangKy> ---- (1,1) 'KhachHang'
+    },{
+        "Nomal"  ---- <ChaCon> ---- 'KhachHang'
+    },{
+        "Vip" ---- <ChaCon> ---- 'KhachHang'
+    },{
+        "KhachHang" ---- <DaTri_KhachHang_SDT> ---- 'KhachHang'
+    },{
+        "KhachHang" (1,n) ---- <KhachHang_Co_DongKhach> ---- (1,n) 'DongKhach'
+    },{
+        "DichVu" (1,n) ---- <SuDungDichVu> ---- (1,n) 'PhieuPhong'
+    },{
+        "HoaDon" (1,1) ---- <Co> ---- (1,1) 'PhieuPhong'
+    }
+]

@@ -1,0 +1,19 @@
+Bao đóng tập thuộc tính X ( -- PK_MaKH -- PK_MaPhong) là: 
+	QuocTich
+	TinhTrang
+	ViTri
+	NgayHetHan
+	SoGiong
+	SoLanDatPhong
+	PK_SDT
+	PK_MaLP
+	DonGia
+	HoTenKH
+	CMND
+	PK_MaPhong
+	PK_MaKH
+	SucChua
+	TenLP
+
+Lược đồ có các khóa là: 
+	{ PK_SDT_DK PK_MaHD PK_MaDV PK_MaPhong PK_MaKH }
